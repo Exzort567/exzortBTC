@@ -126,23 +126,7 @@ const Navbar = ({
           </div>
         </div>
 
-        <div className="flex md:hidden">
-          {isDropDownVisible ? (
-            // display an x icon when the drop is visible
-            <div
-              onClick={toggleDropDown}
-              className="w-8 h-8 text-slate-300 cursor-pointer"
-            >
-              <X />
-              <DropDownMenu onClose={closeDropDown} />
-            </div>
-          ) : (
-            <AlignJustify
-              onClick={toggleDropDown}
-              className="w-8 h-8 text-slate-300 cursor-pointer"
-            />
-          )}
-        </div>
+        
 
         <div className="hidden md:flex">
           <Link
