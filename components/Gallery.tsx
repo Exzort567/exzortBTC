@@ -18,55 +18,55 @@ export function HeroParallaxDemo() {
 }
 export const products = [
   {
-    title: "Moonbeam",
-    link: "https://gomoonbeam.com",
+    title: "compe",
+    link: "https://t.me/exzortBTC",
     thumbnail: compe,
   },
   {
-    title: "Cursor",
-    link: "https://cursor.so",
+    title: "Certificate 1",
+    link: "https://t.me/exzortBTC",
     thumbnail: certOne,
   },
   {
-    title: "Rogue",
-    link: "https://userogue.com",
+    title: "Certificate 2",
+    link: "https://t.me/exzortBTC",
     thumbnail: certTwo,
   },
 
   {
-    title: "Editorially",
-    link: "https://editorially.org",
+    title: "Certificate 3",
+    link: "https://t.me/exzortBTC",
     thumbnail: certThree,
   },
   {
-    title: "Editrix AI",
-    link: "https://editrix.ai",
+    title: "Certificate 4",
+    link: "https://t.me/exzortBTC",
     thumbnail: certFour,
   },
   {
-    title: "Pixel Perfect",
-    link: "https://app.pixelperfect.quest",
+    title: "Certificate 5",
+    link: "https://t.me/exzortBTC",
     thumbnail: certFive,
   },
 
   {
-    title: "Algochurn",
-    link: "https://algochurn.com",
+    title: "Certificate 6",
+    link: "https://t.me/exzortBTC",
     thumbnail: certSix,
   },
   {
-    title: "Aceternity UI",
-    link: "https://ui.aceternity.com",
+    title: "Certificate 7",
+    link: "https://t.me/exzortBTC",
     thumbnail: certSeven,
   },
   {
-    title: "Tailwind Master Kit",
-    link: "https://tailwindmasterkit.com",
+    title: "Certificate 8",
+    link: "https://t.me/exzortBTC",
     thumbnail: certEight,
   },
   {
-    title: "SmartBridge",
-    link: "https://smartbridgetech.com",
+    title: "Certificate 9",
+    link: "https://t.me/exzortBTC",
     thumbnail: certNine,
   },
  
