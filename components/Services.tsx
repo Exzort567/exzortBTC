@@ -17,7 +17,7 @@ export function WobbleCardDemo() {
             Services
           </h2>
           <p className="mt-4 text-left  text-base/6 text-neutral-200">
-          We're dedicated to providing our members with essential tools and top-notch trading signals, helping them sharpen their competitive edge, maintain profitability, and reach their trading goals with confidence and precision.
+          We&apos;re dedicated to providing our members with essential tools and top-notch trading signals, helping them sharpen their competitive edge, maintain profitability, and reach their trading goals with confidence and precision.
           </p>
         </div>
         <Image

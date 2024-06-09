@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { StickyScroll } from "./ui/sticky-scroll-reveal";
 import Image from "next/image";
@@ -8,7 +7,6 @@ import Social from "../public/images/social.jpg";
 import { FaTelegram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { SiTradingview } from "react-icons/si";
-
 
 const content = [
   {
@@ -40,7 +38,7 @@ const content = [
         >
           here
         </a>
-        . Additionally, I passed four funded account evaluations with My Funded FX and received some payouts. However, I couldn't maintain those accounts due to academic commitments at the time. Now, I've shifted my focus back to crypto trading.
+        . Additionally, I passed four funded account evaluations with My Funded FX and received some payouts. However, I couldn&apos;t maintain those accounts due to academic commitments at the time. Now, I&apos;ve shifted my focus back to crypto trading.
       </>
     ),
     content: (
@@ -70,7 +68,6 @@ const content = [
           <a href=" https://www.tradingview.com/u/Exzort/" target="_blank" rel="noopener noreferrer">
             <SiTradingview className="text-2xl text-white" />
           </a>
-         
         </div>
       </>
     ),
@@ -86,7 +83,6 @@ const content = [
       </div>
     ),
   },
-
 ];
 
 export function StickyScrollRevealDemo() {
