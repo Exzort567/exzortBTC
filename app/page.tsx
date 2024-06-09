@@ -6,6 +6,8 @@ import { StickyScrollRevealDemo } from "@/components/About";
 import { HeroParallaxDemo } from "@/components/Gallery";
 import { WobbleCardDemo } from "@/components/Services";
 import Pricing from "@/components/Pricing";
+import FAQS from "@/components/Faq";
+import Footer from "@/components/Footer";
 
 
 
@@ -20,6 +22,8 @@ export default function Home() {
       <HeroParallaxDemo/>
       <WobbleCardDemo/>
       <Pricing/>
+      <FAQS/>
+      <Footer/>
     </div>
   );
 }
