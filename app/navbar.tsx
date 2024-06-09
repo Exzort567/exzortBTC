@@ -7,48 +7,81 @@ import Link from "next/link";
 import { AlignJustify, X } from "lucide-react";
 import DropDownMenu from "@/components/drop-down-menu";
 
-export function FloatingNavDemo() {
+interface FloatingNavDemoProps {
+  scrollToHero: () => void;
+  scrollToAbout: () => void;
+  scrollToGallery: () => void;
+  scrollToServices: () => void;
+  scrollToPricing: () => void;
+}
+
+export function FloatingNavDemo({
+  scrollToHero,
+  scrollToAbout,
+  scrollToGallery,
+  scrollToServices,
+  scrollToPricing,
+}: FloatingNavDemoProps) {
   const navItems = [
     {
       name: "Home",
-      link: "/",
+      link: "#",
       icon: <IconHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      onClick: scrollToHero,
     },
     {
       name: "About",
-      link: "/about",
+      link: "#",
       icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      onClick: scrollToAbout,
     },
     {
-      name: "Contact",
-      link: "/contact",
-      icon: (
-        <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />
-      ),
+      name: "Gallery",
+      link: "#",
+      icon: <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      onClick: scrollToGallery,
+    },
+    {
+      name: "Services",
+      link: "#",
+      icon: <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      onClick: scrollToServices,
+    },
+    {
+      name: "Pricing",
+      link: "#",
+      icon: <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      onClick: scrollToPricing,
     },
   ];
   return (
     <div className="relative w-full z-10">
       <FloatingNav navItems={navItems} />
-      <Navbar />
+      <Navbar
+        scrollToHero={scrollToHero}
+        scrollToAbout={scrollToAbout}
+        scrollToGallery={scrollToGallery}
+        scrollToServices={scrollToServices}
+        scrollToPricing={scrollToPricing}
+      />
     </div>
   );
 }
 
 interface NavbarProps {
-  scrollToWebsiteDesign: () => void;
-  scrollToGraphicDesign: () => void;
-  scrollToShopifyStores: () => void;
-  scrollToBrands: () => void;
-  scrollToServices: () => void; // Define scrollToServices function
+  scrollToHero: () => void;
+  scrollToAbout: () => void;
+  scrollToGallery: () => void;
+  scrollToServices: () => void;
+  scrollToPricing: () => void;
 }
 
 const Navbar = ({
-  scrollToWebsiteDesign,
-  scrollToGraphicDesign,
-  scrollToShopifyStores,
-  scrollToBrands,
-  scrollToServices, // Add scrollToServices to props
+  scrollToHero,
+  scrollToAbout,
+  scrollToGallery,
+  scrollToServices,
+  scrollToPricing,
 }: NavbarProps) => {
   const [isDropDownVisible, setIsDropDownVisible] = useState(false);
 
@@ -76,23 +109,21 @@ const Navbar = ({
                bg-gradient-to-b from-neutral-50
                 to bg-neutral-400 bg-opacity-50"
         >
-          <div onClick={scrollToWebsiteDesign} className="hover:text-gray-50">
+          <div onClick={scrollToHero} className="hover:text-gray-50">
             Home
           </div>
-          <div onClick={scrollToGraphicDesign} className="hover:text-gray-50">
+          <div onClick={scrollToAbout} className="hover:text-gray-50">
             About
           </div>
-
-          <div onClick={scrollToShopifyStores} className="hover:text-gray-50">
+          <div onClick={scrollToGallery} className="hover:text-gray-50">
             Gallery
           </div>
-          <div onClick={scrollToBrands} className="hover:text-gray-50">
+          <div onClick={scrollToServices} className="hover:text-gray-50">
             Services
           </div>
-
-          <Link href="/pricing" className="hover:text-gray-50">
+          <div onClick={scrollToPricing} className="hover:text-gray-50">
             Pricing
-          </Link>
+          </div>
         </div>
 
         <div className="flex md:hidden">
@@ -103,10 +134,7 @@ const Navbar = ({
               className="w-8 h-8 text-slate-300 cursor-pointer"
             >
               <X />
-              <DropDownMenu
-                onClose={closeDropDown}
-                scrollToServices={scrollToServices} // Pass scrollToServices
-              />
+              <DropDownMenu onClose={closeDropDown} />
             </div>
           ) : (
             <AlignJustify
@@ -118,7 +146,8 @@ const Navbar = ({
 
         <div className="hidden md:flex">
           <Link
-            href="/contact"
+            target="_blank"
+            href="https://t.me/exzort567"
             className="
               inline-flex h-12 animate-shimmer items-center justify-center 
               rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] 
