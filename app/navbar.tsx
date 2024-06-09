@@ -2,10 +2,7 @@
 import React from "react";
 import { FloatingNav } from "../components/ui/floating-navbar";
 import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
-import { useState } from "react";
 import Link from "next/link";
-import { AlignJustify, X } from "lucide-react";
-import DropDownMenu from "@/components/drop-down-menu";
 
 interface FloatingNavDemoProps {
   scrollToHero: () => void;
@@ -83,16 +80,6 @@ const Navbar = ({
   scrollToServices,
   scrollToPricing,
 }: NavbarProps) => {
-  const [isDropDownVisible, setIsDropDownVisible] = useState(false);
-
-  const toggleDropDown = () => {
-    setIsDropDownVisible(!isDropDownVisible);
-  };
-
-  const closeDropDown = () => {
-    setIsDropDownVisible(false);
-  };
-
   return (
     <div>
       <div className="p-6 md:p-10 flex items-center justify-between z-50 bg-transparent">
@@ -125,8 +112,6 @@ const Navbar = ({
             Pricing
           </div>
         </div>
-
-        
 
         <div className="hidden md:flex">
           <Link
