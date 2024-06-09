@@ -15,11 +15,11 @@ import LoadingSpinner from "@/components/LoadingSpinner";
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
-  const heroRef = useRef(null);
-  const aboutRef = useRef(null);
-  const galleryRef = useRef(null);
-  const servicesRef = useRef(null);
-  const pricingRef = useRef(null);
+const heroRef = useRef<HTMLDivElement>(null);
+const aboutRef = useRef<HTMLDivElement>(null);
+const galleryRef = useRef<HTMLDivElement>(null);
+const servicesRef = useRef<HTMLDivElement>(null);
+const pricingRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Simulate loading time
@@ -35,13 +35,13 @@ export default function Home() {
       {isLoading && <LoadingSpinner />}
       {!isLoading && (
         <div className="w-full screen md:items-center bg-black/[0.86] antialiased bg-grid-white/[0.02] relative overflow-hidden">
-          <FloatingNavDemo 
-            scrollToHero={() => heroRef.current.scrollIntoView({ behavior: "smooth" })}
-            scrollToAbout={() => aboutRef.current.scrollIntoView({ behavior: "smooth" })}
-            scrollToGallery={() => galleryRef.current.scrollIntoView({ behavior: "smooth" })}
-            scrollToServices={() => servicesRef.current.scrollIntoView({ behavior: "smooth" })}
-            scrollToPricing={() => pricingRef.current.scrollIntoView({ behavior: "smooth" })}
-          />
+         <FloatingNavDemo 
+          scrollToHero={() => heroRef.current?.scrollIntoView({ behavior: "smooth" })}
+          scrollToAbout={() => aboutRef.current?.scrollIntoView({ behavior: "smooth" })}
+          scrollToGallery={() => galleryRef.current?.scrollIntoView({ behavior: "smooth" })}
+          scrollToServices={() => servicesRef.current?.scrollIntoView({ behavior: "smooth" })}
+          scrollToPricing={() => pricingRef.current?.scrollIntoView({ behavior: "smooth" })}
+        />
           <Spotlight className="hidden md:flex md:left-80 md:-top-80" fill="white" />
 
           <div ref={heroRef}>
