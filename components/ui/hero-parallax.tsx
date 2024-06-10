@@ -9,6 +9,7 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { StaticImageData } from "next/image";
 
 export const HeroParallax = ({
   products,
@@ -16,7 +17,7 @@ export const HeroParallax = ({
   products: {
     title: string;
     link: string;
-    thumbnail: string;
+    thumbnail: StaticImageData;
   }[];
 }) => {
   const firstRow = products.slice(0, 5);
@@ -108,7 +109,7 @@ export const Header = () => {
         Funded Challenge <br /> Certificates
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 text-neutral-100">
-      I successfully passed four funded challenges with My Funded FX prop firm not including the other prop firms.
+        I successfully passed four funded challenges with My Funded FX prop firm not including the other prop firms.
       </p>
     </div>
   );
@@ -121,7 +122,7 @@ export const ProductCard = ({
   product: {
     title: string;
     link: string;
-    thumbnail: string;
+    thumbnail: StaticImageData;
   };
   translate: MotionValue<number>;
 }) => {

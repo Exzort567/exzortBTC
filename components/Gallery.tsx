@@ -69,5 +69,4 @@ export const products = [
     link: "https://t.me/exzortBTC",
     thumbnail: certNine,
   },
- 
 ];
